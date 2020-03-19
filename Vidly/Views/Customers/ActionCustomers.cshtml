@@ -1,0 +1,10 @@
+﻿@model Vidly.ViewModels.CustomerViewModel
+@{
+    ViewBag.Title = "ActionCustomers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ActionCustomers</h2>
+
+@Model.Customer.First().Name
+@Model.Movie.Name
