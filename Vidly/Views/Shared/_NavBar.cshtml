@@ -5,16 +5,18 @@
             @*<button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="navbarColor03" aria-label="Toggle navigation" data-target="#navbarColor03" data-toggle="collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>*@
-            @Html.ActionLink("Widly", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @* @Html.ActionLink("Widly", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            @Html.ActionLink("Widly", "Index", "Home","Home",  new { @class = "navbar-brand" })
+
         </div>
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="nav navbar-nav mr-auto">
-                <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Home", "Index","Home","Home",  new { @class = "nav-link" })</li>
                 @*<li>@Html.ActionLink("Informazioni", "About", "Home", new { @class = "nav-link" })</li>*@
                 <li>@Html.ActionLink("Customer", "ActionCustomers", "Customers", routeValues: null, htmlAttributes: new { @class = "nav-link" })</li>
                 @*<li>@Html.ActionLink("Customer", "ActionCustomers", "Customers", new { area = "" }, new { @class = "nav-link" }) </li>*@
                 @* <li>@Html.ActionLink("Customers", "ActionCustomers",controllerName:"Customers", "Customers", new { @class = "nav-link" })</li>*@
-                <li>@Html.ActionLink("Contatto", "Contact", "Home", new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Contatto", "Contact", "Home","Home", new { @class = "nav-link" })</li>
             </ul>
             @Html.Partial("_LoginPartial")
         </div>

@@ -11,7 +11,7 @@ namespace Vidly.Controllers
    
     public class CustomersController : Controller
     {
-        [Route("Customers/Action")]
+        //[Route("Customers/Action")]
         // GET: Customers
         public ActionResult ActionCustomers()
         {
