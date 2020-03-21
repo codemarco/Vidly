@@ -191,6 +191,10 @@
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-Vidly-20200310062958.mdf" />
+    <Content Include="App_Data\aspnet-Vidly-20200310062958_log.ldf">
+      <DependentUpon>aspnet-Vidly-20200310062958.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-spacelab.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -253,9 +257,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\ActionCustomers.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
