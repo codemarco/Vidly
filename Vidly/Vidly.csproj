@@ -191,6 +191,14 @@
     <Compile Include="Migrations\202003220915102_AddMembershipTypeCorrection.Designer.cs">
       <DependentUpon>202003220915102_AddMembershipTypeCorrection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003220919134_AddMembershipTypeTest.cs" />
+    <Compile Include="Migrations\202003220919134_AddMembershipTypeTest.Designer.cs">
+      <DependentUpon>202003220919134_AddMembershipTypeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003220924347_AddMembershipTypeRicorrezione.cs" />
+    <Compile Include="Migrations\202003220924347_AddMembershipTypeRicorrezione.Designer.cs">
+      <DependentUpon>202003220924347_AddMembershipTypeRicorrezione.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -296,6 +304,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003220915102_AddMembershipTypeCorrection.resx">
       <DependentUpon>202003220915102_AddMembershipTypeCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003220919134_AddMembershipTypeTest.resx">
+      <DependentUpon>202003220919134_AddMembershipTypeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003220924347_AddMembershipTypeRicorrezione.resx">
+      <DependentUpon>202003220924347_AddMembershipTypeRicorrezione.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
