@@ -199,6 +199,10 @@
     <Compile Include="Migrations\202003220924347_AddMembershipTypeRicorrezione.Designer.cs">
       <DependentUpon>202003220924347_AddMembershipTypeRicorrezione.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003221504477_ApplyRequired.cs" />
+    <Compile Include="Migrations\202003221504477_ApplyRequired.Designer.cs">
+      <DependentUpon>202003221504477_ApplyRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -310,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003220924347_AddMembershipTypeRicorrezione.resx">
       <DependentUpon>202003220924347_AddMembershipTypeRicorrezione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003221504477_ApplyRequired.resx">
+      <DependentUpon>202003221504477_ApplyRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
