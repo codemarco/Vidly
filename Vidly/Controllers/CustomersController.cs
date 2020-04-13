@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -29,7 +30,7 @@ namespace Vidly.Controllers
         public ViewResult Index()
         {
 
-            var customers = _context.Customers.ToList();
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
 
             //var customers = GetCustomers();
             return View(customers);
@@ -39,40 +40,40 @@ namespace Vidly.Controllers
 
         public ActionResult Details(int? id)
         {
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(c =>c.MembershipType).SingleOrDefault(c => c.Id == id);
             if (customer == null)
                 return HttpNotFound();
             return View(customer);
         }
 
-        private IEnumerable<Customer> GetCustomers()
-        {
-            return new List<Customer>
-            {
-                new Customer {Id = 1, Name = "John Smith"},
-                new Customer {Id = 2, Name = "Mary Williams"}
-            };
-        }
+        //private IEnumerable<Customer> GetCustomers()
+        //{
+        //    return new List<Customer>
+        //    {
+        //        new Customer {Id = 1, Name = "John Smith"},
+        //        new Customer {Id = 2, Name = "Mary Williams"}
+        //    };
+        //}
 
-        public ActionResult ActionCustomers()
-        {
-            var movie = new Movie() {Id = 1, Name = "Shrek"};
-            var viewCustomers = new CustomerViewModel();
+        //public ActionResult ActionCustomers()
+        //{
+        //    var movie = new Movie() {Id = 1, Name = "Shrek"};
+        //    var viewCustomers = new CustomerViewModel();
 
-            viewCustomers.Customer = new List<Customer>();
-            viewCustomers.Movie = movie;
+        //    viewCustomers.Customer = new List<Customer>();
+        //    viewCustomers.Movie = movie;
 
 
-            var customerList = viewCustomers.Customer;
+        //    var customerList = viewCustomers.Customer;
             
-            customerList.Add(new Customer {Name= "Marco"});
-            customerList.Add(new Customer { Name = "Silvia" });
+        //    customerList.Add(new Customer {Name= "Marco"});
+        //    customerList.Add(new Customer { Name = "Silvia" });
 
             
           
 
-            return View(viewCustomers);
+        //    return View(viewCustomers);
             
-        }
+        //}
     }
 }
